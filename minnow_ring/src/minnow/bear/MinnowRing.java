@@ -64,7 +64,10 @@ public class MinnowRing extends Activity
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        rv = new RingView(this);
+        try {
+            rv = new RingView(this);
+        } catch (InterruptedException e) {
+        }
         setContentView(rv);
 
         rt = rv.getThread();
