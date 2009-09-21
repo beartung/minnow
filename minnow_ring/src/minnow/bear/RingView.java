@@ -123,7 +123,6 @@ class RingView extends SurfaceView implements SurfaceHolder.Callback,
                     c = mSurfaceHolder.lockCanvas(null);
                     synchronized (mSurfaceHolder) {
                         if (mMode == STATE_RUNNING) updatePhysics();
-                        Log.v(TAG, "going to doDraw");
                         doDraw(c);
                         if (System.currentTimeMillis() > mLastTime){
                             mLastTime = System.currentTimeMillis() + 100;

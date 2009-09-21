@@ -31,7 +31,7 @@ public class Bead
     public static final int[] light_colors = {L_BLUE, L_RED, L_GREEN};
     public static final int COLOR_NUM = 4;
     public static final Paint paint = new Paint();
-    {
+    static {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.FILL);
     } 
@@ -69,8 +69,8 @@ public class Bead
     }
 
     public void draw(Canvas canvas){
-        //RadialGradient rg = new RadialGradient(x-s_offset, y-s_offset, r, light_colors[color], colors[color], TileMode.MIRROR);
-        //paint.setShader(rg);
+        RadialGradient rg = new RadialGradient(x-s_offset, y-s_offset, r, light_colors[color], colors[color], TileMode.MIRROR);
+        paint.setShader(rg);
         canvas.drawArc(ball, 0, 360, true, paint);
         //canvas.drawArc(lightspot, 0, 360, true, paint);
     }

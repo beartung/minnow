@@ -57,7 +57,7 @@ public class Ring extends ShapeDrawable
         }
 
         for (int i = 0; i < bead_num; i++){
-            Log.v(TAG, "a: "+beads[i].angle); 
+            Log.v(TAG, "x:"+beads[i].x+" y:"+beads[i].y+" a: "+beads[i].angle); 
         }
     }
 
